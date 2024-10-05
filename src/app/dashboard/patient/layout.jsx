@@ -24,7 +24,7 @@ const PatientLayout = ({ children }) => {
   return (
     <div className="flex h-full">
       {/* Patient-specific Sidebar */}
-      <div className="flex-none w-1/6 -ml-4 -mt-4 bg-purple-200 p-4 min-h-screen">
+      <div className="flex-none w-1/6 -ml-6 -mt-6 bg-purple-200 p-4 min-h-screen">
         <ul className="space-y-4">
           <li><Link href="/dashboard/patient/profile">Profile</Link></li>
           <li><Link href="/dashboard/patient/appointments">Appointments</Link></li>
@@ -33,7 +33,7 @@ const PatientLayout = ({ children }) => {
       </div>
 
       {/* Patient content area */}
-      <div className="flex-grow p-4">
+      <div className="flex-grow p-0">
         {children}
       </div>
     </div>

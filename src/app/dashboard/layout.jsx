@@ -105,9 +105,8 @@ const DashboardLayout = ({ children }) => {
           {/* Logo */}
           <div className="flex justify-center mb-6">
             {/* Logo Image */}
-            <img src="/path-to-your-logo.png" alt="PRACTYZ Logo" className="w-12 h-12" />
+            <Image src="/logo.svg" alt="Logo" width={100} height={100} />
           </div>
-          <h1 className="text-center text-2xl font-bold">PRACTYZ</h1>
         </div>
         <ul className="space-y-8 text-lg">
           <li className="flex items-center space-x-2">
@@ -139,7 +138,7 @@ const DashboardLayout = ({ children }) => {
 
       {/* Main content area */}
       <div className="flex-grow bg-gray-100">
-        <header className="bg-white p-4 flex justify-end items-center space-x-6 shadow">
+        <header className="bg-white p-3 flex justify-end items-center space-x-6 shadow">
           {/* Navbar icons */}
           <span className="material-icons text-gray-600 cursor-pointer"><MdOutlineCalendarMonth /></span>
           <span className="material-icons text-gray-600 cursor-pointer"><RiApps2AddLine /></span>
