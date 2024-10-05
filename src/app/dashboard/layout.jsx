@@ -87,7 +87,14 @@ import { CiMail } from "react-icons/ci";
 import { RiApps2AddLine } from "react-icons/ri";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { MdDashboard } from "react-icons/md";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { TbReceipt } from "react-icons/tb";
+import { TbInvoice } from "react-icons/tb";
+import { MdOutlineAssignment } from "react-icons/md";
 
+
+import Image from 'next/image';
 
 const DashboardLayout = ({ children }) => {
   return (
@@ -104,27 +111,27 @@ const DashboardLayout = ({ children }) => {
         </div>
         <ul className="space-y-8 text-lg">
           <li className="flex items-center space-x-2">
-            <span className="material-icons">dashboard</span>
+            <span className="material-icons"><MdDashboard /></span>
             <Link href="/dashboard" className="hover:text-gray-300">Dashboard</Link>
           </li>
           <li className="flex items-center space-x-2">
-            <span className="material-icons">calendar_today</span>
+            <span className="material-icons"><FaRegCalendarAlt /></span>
             <Link href="/dashboard/calendar" className="hover:text-gray-300">Calendar</Link>
           </li>
           <li className="flex items-center space-x-2">
-            <span className="material-icons">people</span>
+            <Image src="/patient.svg" alt="Patient Icon" width={24} height={24} />
             <Link href="/dashboard/patient" className="hover:text-gray-300">Patient</Link>
           </li>
           <li className="flex items-center space-x-2">
-            <span className="material-icons">receipt</span>
+            <span className="material-icons"><TbInvoice/></span>
             <Link href="/dashboard/invoice" className="hover:text-gray-300">Invoice</Link>
           </li>
           <li className="flex items-center space-x-2">
-            <span className="material-icons">credit_card</span>
+            <span className="material-icons"><TbReceipt/></span>
             <Link href="/dashboard/billings" className="hover:text-gray-300">Billings</Link>
           </li>
           <li className="flex items-center space-x-2">
-            <span className="material-icons">assignment</span>
+            <span className="material-icons"><MdOutlineAssignment/></span>
             <Link href="/dashboard/records" className="hover:text-gray-300">Records</Link>
           </li>
         </ul>
@@ -134,12 +141,14 @@ const DashboardLayout = ({ children }) => {
       <div className="flex-grow bg-gray-100">
         <header className="bg-white p-4 flex justify-end items-center space-x-6 shadow">
           {/* Navbar icons */}
-          <span className="material-icons text-gray-600 cursor-pointer"><MdOutlineCalendarMonth/></span>
-          <span className="material-icons text-gray-600 cursor-pointer"><RiApps2AddLine/></span>
-          <span className="material-icons text-gray-600 cursor-pointer"><CiMail/></span>
-          <span className="material-icons text-gray-600 cursor-pointer"><IoIosNotificationsOutline/></span>
-          <img
-            src="/path-to-your-avatar.png"
+          <span className="material-icons text-gray-600 cursor-pointer"><MdOutlineCalendarMonth /></span>
+          <span className="material-icons text-gray-600 cursor-pointer"><RiApps2AddLine /></span>
+          <span className="material-icons text-gray-600 cursor-pointer"><CiMail /></span>
+          <span className="material-icons text-gray-600 cursor-pointer"><IoIosNotificationsOutline /></span>
+          <Image
+            src="/Dr. Ram.jpeg"
+            width={25}
+            height={25}
             alt="User Avatar"
             className="w-8 h-8 rounded-full object-cover"
           />
